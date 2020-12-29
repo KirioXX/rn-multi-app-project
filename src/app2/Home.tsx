@@ -28,7 +28,7 @@ import {
 
 declare const global: {HermesInternal: null | {}};
 
-const App = () => {
+const Home = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -116,4 +116,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default Home;

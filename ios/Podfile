@@ -3,14 +3,15 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '10.0'
 
-target 'RNMonorepoApps' do
+abstract_target 'RNMonorepoApps' do
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
 
-  target 'RNMonorepoAppsTests' do
-    inherit! :complete
-    # Pods for testing
+  target 'RNMonorepoApp1' do
+  end
+
+  target 'RNMonorepoApp2' do
   end
 
   # Enables Flipper.
@@ -20,14 +21,5 @@ target 'RNMonorepoApps' do
   use_flipper!
   post_install do |installer|
     flipper_post_install(installer)
-  end
-end
-
-target 'RNMonorepoApps-tvOS' do
-  # Pods for RNMonorepoApps-tvOS
-
-  target 'RNMonorepoApps-tvOSTests' do
-    inherit! :search_paths
-    # Pods for testing
   end
 end
