@@ -4,6 +4,8 @@
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 
+#import "ReactNativeConfig.h"
+
 #ifdef FB_SONARKIT_ENABLED
 #import <FlipperKit/FlipperClient.h>
 #import <FlipperKitLayoutPlugin/FlipperKitLayoutPlugin.h>
@@ -49,7 +51,8 @@ static void InitializeFlipper(UIApplication *application) {
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
 {
 #if DEBUG
-  return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
+  NSString *entryFile = [ReactNativeConfig envFor:@"ENTRY_FILE"];
+  return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:entryFile fallbackResource:nil];
 #else
   return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
 #endif

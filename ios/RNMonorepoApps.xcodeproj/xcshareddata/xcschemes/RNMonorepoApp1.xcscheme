@@ -1,10 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "1130"
-   version = "1.3">
+   version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <PreActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "cp &quot;${PROJECT_DIR}/../.env.app1&quot; &quot;${PROJECT_DIR}/../.env&quot;&#10;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
+                     BuildableName = "RNMonorepoApps.app"
+                     BlueprintName = "RNMonorepoApp1"
+                     ReferencedContainer = "container:RNMonorepoApps.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "&quot;${SRCROOT}/../node_modules/react-native-config/ios/ReactNativeConfig/BuildXCConfig.rb&quot; &quot;${SRCROOT}/..&quot; &quot;${SRCROOT}/tmp.xcconfig&quot;&#10;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
+                     BuildableName = "RNMonorepoApps.app"
+                     BlueprintName = "RNMonorepoApp1"
+                     ReferencedContainer = "container:RNMonorepoApps.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PreActions>
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
@@ -14,9 +48,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "RNMonorepoApps-tvOS.app"
-               BlueprintName = "RNMonorepoApps-tvOS"
+               BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
+               BuildableName = "RNMonorepoApps.app"
+               BlueprintName = "RNMonorepoApp1"
                ReferencedContainer = "container:RNMonorepoApps.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,16 +62,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "RNMonorepoApps-tvOSTests.xctest"
-               BlueprintName = "RNMonorepoApps-tvOSTests"
-               ReferencedContainer = "container:RNMonorepoApps.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -54,9 +78,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "RNMonorepoApps-tvOS.app"
-            BlueprintName = "RNMonorepoApps-tvOS"
+            BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
+            BuildableName = "RNMonorepoApps.app"
+            BlueprintName = "RNMonorepoApp1"
             ReferencedContainer = "container:RNMonorepoApps.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -71,9 +95,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "RNMonorepoApps-tvOS.app"
-            BlueprintName = "RNMonorepoApps-tvOS"
+            BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
+            BuildableName = "RNMonorepoApps.app"
+            BlueprintName = "RNMonorepoApp1"
             ReferencedContainer = "container:RNMonorepoApps.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

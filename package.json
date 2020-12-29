@@ -1,17 +1,21 @@
 {
-  "name": "RNMonorepoApps",
+  "name": "rn-monorepo-apps",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "android:app1": "react-native run-android --variant=App1Debug --appIdSuffix=app1",
+    "android:app2": "react-native run-android --variant=App2Debug --appIdSuffix=app2",
+    "ios:app1": "react-native run-ios --scheme \"RNMonorepoApp1\" --configuration Debug",
+    "ios:app2": "react-native run-ios --scheme \"RNMonorepoApp2\" --configuration Debug",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "postinstall": "npx pod-install"
   },
   "dependencies": {
     "react": "16.13.1",
-    "react-native": "0.63.3"
+    "react-native": "0.63.3",
+    "react-native-config": "^1.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
